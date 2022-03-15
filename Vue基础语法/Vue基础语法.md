@@ -173,7 +173,7 @@ Mustache 语法不能作用在 HTML attribute 上，遇到这种情况应该使�
 	</body>
 </html>
 ```
-如果 isButtonDisabled 的值是 null、undefined 或 false，则 disabled attribute 甚至不会被包含在渲染出来的 <button> 元素中:
+如果 isButtonDisabled 的值是 null、undefined 或 false，则 disabled attribute 甚至不会被包含在渲染出来的 \<button> 元素中:
 ![](https://s2.loli.net/2022/03/15/AJGd13qztR2Kkah.jpg)
 
 
