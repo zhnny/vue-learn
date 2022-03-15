@@ -41,18 +41,19 @@ Vue.js 使用了基于 HTML 的模板语法，允许开发者声明式地将 DOM
 
 ```
 其显示结果如下：
-![](Vue基础语法_files/1.jpg)
+![](https://s2.loli.net/2022/03/15/HAsvkEwRohd3YJx.jpg)
 Mustache 标签将会被替代为对应数据对象上 message property 的值。无论何时，绑定的数据对象上 message property 发生了改变，插值处的内容都会更新。我们在控制台改变message这个属性：
-![](Vue基础语法_files/2.jpg)
+![](https://s2.loli.net/2022/03/15/rHpZlGB1Yvn6IUt.jpg)
 可以看到DOM即页面元素随机更新
 通过使用 `v-once` 指令，你也能执行一次性地插值，当数据改变时，插值处的内容不会更新。但请留心这会影响到该节点上的其它数据绑定：
+
 ```html
 		<div id="app" v-once>
 			{{message}}
 		</div>
 ```
 再次运行：
-![](Vue基础语法_files/3.jpg)
+![](https://s2.loli.net/2022/03/15/kixlgS9XAcDzuIV.jpg)
 可以看到DOM即页面元素没有更新
 
 
@@ -92,10 +93,10 @@ Mustache 标签将会被替代为对应数据对象上 message property 的值�
 
 ```
 其显示结果如下：
-![](Vue基础语法_files/4.jpg)
+![](https://s2.loli.net/2022/03/15/DJg7u5ifAL8sBG4.jpg)
 
 可以看到message被解析为HTML，如果不加` v-html="message"`：
-![](Vue基础语法_files/5.jpg)
+![](https://s2.loli.net/2022/03/15/xXIEJwemF4D63CY.jpg)
 则message被解析为普通文本
 
 - 注意，你不能使用 v-html 来复合局部模板，因为 Vue 不是基于字符串的模板引擎。反之，对于用户界面 (UI)，组件更适合作为可重用和可组合的基本单位
@@ -140,12 +141,13 @@ Mustache 语法不能作用在 HTML attribute 上，遇到这种情况应该使�
 </html>
 ```
 其显示结果如下：
-![](Vue基础语法_files/6.jpg)
+![](https://s2.loli.net/2022/03/15/ZO3YW6hFH5lN9Ay.jpg)
 
 指令的意思是：“将这个元素节点的style特性和Vue实例的style属性保持一致”
 如果你再次打开浏览器的JavaScript控制台， 输入app.style={color: "bule"}，就会再一次看到这个绑定了style特性的HTML已经进行了更新:
-![](Vue基础语法_files/7.jpg)
+![](https://s2.loli.net/2022/03/15/sAUwYirt7LRaWfD.jpg)
 对于布尔 attribute (它们只要存在就意味着值为 true)，v-bind 工作起来略有不同，在这个例子中：
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -172,7 +174,7 @@ Mustache 语法不能作用在 HTML attribute 上，遇到这种情况应该使�
 </html>
 ```
 如果 isButtonDisabled 的值是 null、undefined 或 false，则 disabled attribute 甚至不会被包含在渲染出来的 <button> 元素中:
-![](Vue基础语法_files/8.jpg)
+![](https://s2.loli.net/2022/03/15/AJGd13qztR2Kkah.jpg)
 
 
 
@@ -205,7 +207,7 @@ Mustache 语法不能作用在 HTML attribute 上，遇到这种情况应该使�
 
 ```
 其展示结果如下：
-![](Vue基础语法_files/9.jpg)
+![](https://s2.loli.net/2022/03/15/ohsajkb6Qze8LFY.jpg)
 
 可以看到表达式会在所属 Vue 实例的数据作用域下作为 JavaScript 被解析
 有个限制就是，每个绑定都只能包含单个表达式，所以下面的例子都不会生效：
@@ -261,7 +263,7 @@ v-bind之前已经使用过，现在讲述一些常用的指令
 	</body>
 </html>
 ```
-![](Vue基础语法_files/10.jpg)
+![](https://s2.loli.net/2022/03/15/4XebSDCOTjAR8t7.jpg)
 ```html
 <!DOCTYPE html>
 <html>
@@ -289,7 +291,7 @@ v-bind之前已经使用过，现在讲述一些常用的指令
 </html>
 
 ```
-![](Vue基础语法_files/11.jpg)
+![](https://s2.loli.net/2022/03/15/2DV7SrJg6f1cA4L.jpg)
 
 
 
@@ -323,7 +325,7 @@ v-bind之前已经使用过，现在讲述一些常用的指令
 	</body>
 </html>
 ```
-![](Vue基础语法_files/12.jpg)
+![](https://s2.loli.net/2022/03/15/m6bgWQ5xaeTolAV.jpg)
 
 
 
@@ -369,10 +371,10 @@ v-bind之前已经使用过，现在讲述一些常用的指令
 ```
 
 实现效果：
-![](Vue基础语法_files/13.jpg)
+![](https://s2.loli.net/2022/03/15/XCLaH9PzUR4uIDr.jpg)
 
 测试：在控制台输入app.type.push('D')，尝试追加一条数据，你会发现浏览器中显示的内容会增加一条D
-![](Vue基础语法_files/14.jpg)
+![](https://s2.loli.net/2022/03/15/O2SxfQ5Gpd8LbH9.jpg)
 
 
 
@@ -410,7 +412,7 @@ v-on用于监听 DOM 事件：
 
 ```
 效果：
-![](Vue基础语法_files/15.jpg)
+![](https://s2.loli.net/2022/03/15/XKp7dLwkUVY4QWv.jpg)
 
 
 
@@ -450,7 +452,8 @@ v-on用于监听 DOM 事件：
 </html>
 ```
 实现效果：
-![](Vue基础语法_files/16.jpg)
+![](https://s2.loli.net/2022/03/15/jKWQkOsY78maEpo.jpg)
+
 - 注意：在 DOM 中使用模板时 (直接在一个 HTML 文件里撰写模板)，还需要避免使用大写字符来命名键名，因为浏览器会把 attribute 名全部强制转为小写：
 ```html
 <!--

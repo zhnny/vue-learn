@@ -141,9 +141,9 @@ MVVM模式和MVC模式一样，主要目的是分离视图（View）和模型（
 ```
 
 用浏览器打开这个文件可以看到（笔者使用HBuilderX）：
-![预览界面](Hello-Vue_files/1.jpg)
+![预览界面](https://s2.loli.net/2022/03/15/3d1eFmXk2styYvQ.jpg)
 使用F12打开控制台，尝试修改app这个对象的message属性，发现网页也随着变化：
-![调试控制台](Hello-Vue_files/2.jpg)
+![调试控制台](https://s2.loli.net/2022/03/15/Tba5wyVvfCI8rpk.jpg)
 
 这就再次验证了Vue.js就是一个MVVM的实现者， 他的核心就是实现了DOM监听与数据绑定
 
